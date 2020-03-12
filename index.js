@@ -27,7 +27,13 @@ document.addEventListener("DOMContentLoaded", function(){
         movesCon.appendChild(down)
          break;
       case 8:
-        movesCon.removeChild(document.getElementById("moves-container").lastChild);
+        let movesArray = Array.from(document.getElementsByTagName("li"))
+        if (movesArray.length > 0 ) {
+          movesCon.removeChild(document.getElementById("moves-container").lastChild);
+        }
+        else {
+            alert("Bruh, what is u doing?")
+        }
       break;
    }
   })
